@@ -1,0 +1,392 @@
+
+body{
+    background: rgb(247, 238, 245);
+    width: 70%;
+    margin: auto;
+    font-family: sans-serif;
+ } 
+ /*  ======================fit the name and display to question ===========*/
+.scoress{
+    font-size: 25px;
+}
+ .sceeps{
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+}
+.texts_body{
+    font-size: 20px;
+}
+ #wrapper{
+    margin: 5px;
+    margin-top: 10px;
+}
+
+ header{
+     background-color: rgb(108, 165, 240);	
+     padding-bottom: 20px;
+     text-align: center;
+     color: #fff;
+     padding: 8px;
+     border-radius: 5px;
+ }
+ h1{
+    text-align: left;
+    margin-left: 20px;
+    border-radius: 2px;
+ }
+ li{
+     list-style: none;
+ }
+ input[type=email]{
+    height: 5vh;
+    width: 100%;
+    margin: 3px 0px;
+    box-sizing: border-box;
+    border: none;
+    background: rgb(226, 238, 243);
+    border-bottom: solid 1px;
+ } 
+ .passId{
+    width:40% ;
+    margin: auto;
+    height: 4vh;
+    border: none;
+    background: rgb(226, 238, 243);
+    border-bottom: solid 1px;
+}
+ #btnNext{
+     font-size: 15px;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     cursor: pointer;
+     display: flex;
+     background-color: rgb(78, 143, 228);	
+     color: rgb(236, 236, 236);
+     border: none;
+     border-radius: 6px;
+     margin-left: 89%;
+     width: 10%;
+     height: 5vh;
+ }
+ #btnNext:hover{
+     box-shadow: 2px 4px 8px 1px #aaa;
+     transform: translateY(-2px);
+ }
+/* ====================================code====================== */
+.addition_quiz{
+    align-items: center;
+   }
+   .maker{
+       padding: 20px;
+   }
+   .maker,.take-show{
+       display: flex;
+       font-size: 25px;
+       text-align: center;
+       margin: auto;
+   }
+   .optional{
+       width: 90%;
+       height: 5vh;
+       display: flex;
+       margin: auto;
+   }
+   .chooser_option{
+       display: flex;
+       justify-content: space-between;
+   }
+   .chocess{
+       width: 40%;
+       margin-top: 20px;
+       justify-content: space-between;
+       align-items: center;
+       text-align: center;
+       padding: 5px;
+   }
+   .optioner{
+       height: 5vh;
+   }
+   .addtogo{
+       background: rgb(58, 71, 246);
+       width: 35%;
+       height: 5vh;
+       font-size: 18px;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       margin-top:40px;
+       margin-left: 32%;
+       border-radius: 5px;
+   }
+   .storanswers{
+       font-size: 20px;
+       margin-top: 35px; 
+   }
+   .takeback{
+       display: flex;
+       justify-content: flex-end;
+   }
+   .clinker{
+       width: 10%;
+       margin: 3px;
+       font-size: 18px;
+       background: rgb(153, 219, 250);
+       border-radius: 5px;
+   }
+   .clickerss{
+       width: 15%;
+       font-size: 20px;
+       border-radius: 5px;
+       background: rgb(59, 188, 240);
+   }
+   span{
+       display: block;
+       margin-top: 5px;
+   }
+   .biganswer{
+       margin-bottom: 15px;
+   }
+   .title_question{
+       font-size: 20px;
+       margin-top: 15px;
+   }
+   .allanswerses{
+       margin-top: 20px;
+   }
+   .flexDelete{
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 20px;
+       margin-left: 2rem;
+   }
+   .delectts{
+       display: flex;
+       margin-top: 0%;
+       width: 8%;
+       height: 4vh;
+       display: flex;
+       color: #fff;
+       font-size: 20px;
+       align-items: center;
+       text-align: center;
+       border-radius: 4px;
+       background: rgb(250, 80, 80);
+   }
+.make_question{
+    background: rgb(218, 225, 246);
+    border-radius: 4px;
+    margin-top: 10px;
+    margin: 5px;
+}
+   .clicks{
+       height: 5vh;
+       width: 15%;
+       justify-content: center;
+       display: flex;
+       align-items: center;
+       text-align: center;
+       background: rgb(250, 87, 87);
+       border-radius: 6px;
+   }
+   .backAndBack{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: flex-start;
+   }
+
+   .backAndNext{
+       height: 10vh;
+       display: flex;
+       margin: auto;
+       justify-content: flex-end;
+   }
+   .backs{
+      width: 6rem;
+      height: 6vh;
+      font-size: 19px;
+       background: rgb(81, 124, 241);
+   }
+   .nexst{
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    background: rgb(70, 115, 238);
+    width: 4rem;
+   }
+   .nexstst{
+       font-size: 18px;
+       width: 5rem;
+   }
+
+ /* ===============================codes===========>. */
+
+ .container ,button{
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-top: 0%;
+ }
+ .welcomes{
+     font-size: 25px;
+ }
+ .pays,.eddits{
+     background:rgb(105, 105, 247);
+     margin: 6px;
+     height: 6vh;
+     width: 20%;
+     color: white;
+     font-size: 18px;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ }
+
+ .Submit button{
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    color: white;
+    border-radius: 3px;
+    height: 5vh;
+    width: 10%;
+    margin: 10px;
+    font-size: 18px;
+    font-family: inherit;
+}
+.done{
+    display: flex;
+    justify-content: space-between;
+}
+.quiz_done{
+    width: 10%;
+    height: 5vh;
+    font-size: 20px;
+    display: flex;
+    border-radius: 10px;
+    background: teal;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+h5{
+    margin-bottom: 5px;
+}
+
+.card-title, h3{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.question .chioce{
+    margin: auto;
+    margin-left: 10rem;
+   margin-top: 20px;
+}
+
+
+
+/* =============================================== */
+.storeallscore{
+    display: flex;
+    justify-content: space-between;
+}
+#showscores{
+    width: 70%;
+    height: 20vh;
+    background: rgb(111, 118, 211);
+    margin: auto;
+    color: rgb(240, 240, 240);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.showtext{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15rem;
+    height: 10vh;
+}
+.newscore{
+    display: flex;
+    margin: auto;
+}
+.backtos{
+    width: 12%;
+    margin: auto;
+    margin-top: 50px;
+    background: rgb(83, 83, 238);
+    font-size: 18px;
+}
+.backtos:hover{
+    background: rgb(240, 158, 158);
+}
+
+
+.allquestion{
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    height: 40vh;
+    align-items: center;
+    margin-left: 6rem;
+    margin-top: 20px;
+    font-family: Open Sans;
+    background-color: rgb(233, 225, 225);
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 18px;
+}
+.answers{
+    margin-top: 0%;
+    margin-left: 2rem;
+}
+.creaters_button{
+    display: flex;
+    width: 8%;
+    height: 5vh;
+    margin-left: 20rem;
+    font-size: 18px;
+    background: rgb(59, 59, 255);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+#score{
+    margin-left: 46px;
+}
+input{
+    margin: 20px 20px;
+}
+
+button{
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 12px 32px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    background: blue;
+}
+
+.fa{
+    margin-left: 300px;
+    font-size: 200px;
+    color: red;
+}
+i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.submit{
+    text-align: center;
+}
+
