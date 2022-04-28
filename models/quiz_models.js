@@ -26,8 +26,28 @@ function createNewQuiz(question){
     quizs.push(newquiz);
     save(quizs);
     return true;
-
 }
+
+function deleleQuiz(id) {
+    // TODO: load data
+    let quzi = load();
+    // TODO: Mission 4 - Remove the task with good id
+    let index = quzi.findIndex(quzi => quzi.id === parseInt(id));
+    quzi.splice(index, 1);
+    // TODO: Save data
+    save(quzi);
+  }
+  function updateQuiz(id) {
+    // TODO: load data
+    let quize = load();
+    // TODO: Mission 5 - Update the task with good id to 'completed'
+    let index = quize .findIndex(quize  => quize .id === parseInt(id));
+    quize [index].completed = true;
+    // TODO: Save data
+    save(quize);
+  }
 
 module.exports.createNewQuiz=createNewQuiz;
 module.exports.getAllQuizes=getAllQuizes;
+module.exports.deleleQuiz=deleleQuiz;
+module.exports.updateQuiz = updateQuiz;
