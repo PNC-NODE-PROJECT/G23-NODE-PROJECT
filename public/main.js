@@ -17,7 +17,6 @@ numbers.style.display="none";
 backto.style.display="none";
 hideThpquizcreat.style.display="none"
 
-
 function next(){
   // get value from forms iniput name and email password
   let nameInput = document.querySelector('#name').value;
@@ -29,8 +28,6 @@ function next(){
     alert("Sorry You Missing Input...!");
   }
   else{
-    // console.log(nameInput);
-    // console.log(passwordInput);
     editQuizs.style.display="none";
   nextPage.style.display="block";
   wrapper.style.display="none";
@@ -194,7 +191,6 @@ function backstoquiz(){
 let backgoquiz=document.querySelector("#backtos");
 backgoquiz.addEventListener("click",backstoquiz);
 
-
 // Small broswer will show when we submit about question======>
 function showonlyscore(){
   hidethequestion.style.display="none";
@@ -251,7 +247,6 @@ function appear_question(datas){
     
   }
 }
-
 
 function getAllData() {
   axios.get("/api/quiz").then((res)=>{

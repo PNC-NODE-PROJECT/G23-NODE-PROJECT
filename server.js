@@ -9,7 +9,6 @@ app.use(express.static("public"));
 app.listen(PORT,()=>console.log("server running on port" +": " + PORT) );
 //import model
 
-
 //Define static
 app.use(express.static("public"));
 
