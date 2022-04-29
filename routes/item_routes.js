@@ -22,8 +22,8 @@ router.post('/', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    let id = req.params.id
-    let isDeleteItem = itemModel.removeItem(id)
+    let id = req.params.id  ;
+    let isDeleteItem = itemModel.deleleQuiz(id);
     if (isDeleteItem) {
         res.status(200).send({
             "message": 'Item deleted successfully'

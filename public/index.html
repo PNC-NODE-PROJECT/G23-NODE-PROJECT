@@ -1,197 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz app</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-  <!-- ==============================for fill the name and next to display question ==================>>>>>>>>>>>>> -->
-<div id="wrapper" class="deletform">
-    <header class="header">
-      <div class="sceeps" id="page-banner">
-        <h3 class="scoress">My - Quizs</h3>
-      </div>
-    </header>
-    <form action="/action_page.php">
-        <div class="containerr">
-          <input class="input" type="email" placeholder="Your Email" id="name">
-          <input type="password" class="passId" id="password" placeholder="Your PassWord">
-          <button type="button" id = "btnNext" class="goback" name="">Next</button>
-        </div>
-    </form>
-</div>
-
-<div id="next">
-  <div class="container">
-    <p class="welcomes">Welcome to App quizs</p>
-    <button class="pays" id="btn-quiz">Play Quiz</button>
-    <button class="eddits" id="btn-edit-quiz">Add-Quiz</button>
-  </div>
-  
-  <!-- ===========>>>>>><<<<<<<<<============= -->
-    <!-- ######heng### -->
-
-    <div class="backAndBack">
-        <button class="backs">Back</button>
+   
+    <div id="wrapper" class="deletform">
+        <header class="header">
+            <div class="sceeps" id="page-banner">
+                <h3 class="scoress">My __ Quizs_Application Heng-&&-Kimky</h3>
+            </div>
+        </header>
+        <form action="/action_page.php">
+            <div class="containerr">
+                <input class="input" type="email" placeholder="Your Email" id="name">
+                <input type="password" class="passId" id="password" placeholder="Your PassWord">
+                <button type="button" id="btnNext" class="goback" name="">Next</button>
+            </div>
+        </form>
     </div>
-    <div class="backAndshownewquiz">
-        <button class="backs">Back</button>
-    </div>
-  <div id="editQuizs">
-      <form>
-          <div class="maker">
-              <p class="take-show">Create Your Quiz Here</p>
-          </div>
-          <div class="oftion_input">
-              <input class="optional" type="text" placeholder="Question">
-          </div>
-          <div class="chooser_option">
-              <div class="chocess" id="option1"> 
-                  <input type="radio" name="radio1">
-                  <input id="tion1"  type="text" class="optioner" placeholder="Answer1">
-              </div>
-              <div class="chocess" id="option3"> 
-                  <input type="radio" name="radio">
-                  <input id="tion3" type="text" class="optioner" placeholder="Answer3">
-              </div>
-          </div>
 
-          <div class="chooser_option" >
-              <div class="chocess" id="option2">
-                  <input type="radio" name="radio2">
-                  <input id="tion2"  type="text" class="optioner" placeholder="Answer2"><br>
-              </div>
-              <div class="chocess" id="option4">
-                  <input type="radio" name="radio4">
-                  <input id="tion4"  type="text" class="optioner" placeholder="Answer4"><br>
-              </div>
-          </div>
-         
-      </form>
-        
-      <div>
-          <button  class="addtogo" id="addtogo">Add+</button>
-         
-         
-          <div id="display-container">
-          </div>
-          <div class="icons">
-            <i class="fa fa-pencil fa-2x cons"></i>
-            <i class="fa fa-trash-o fa-2x cons"></i>
+    <div id="next">
+        <div class="container">
+            <p class="welcomes">Welcome To Application Quizs</p>
+            <button class="pays" id="btn-quiz">Play Quiz</button>
+            <button class="eddits" id="btn-edit-quiz">Add-Quiz</button>
         </div>
-      </div>
-     
-      </div>
+
+
+        <div class="backAndBack">
+            <button class="backs">Back</button>
+        </div>
+        <div class="backAndshownewquiz">
+            <button class="backs">Back</button>
+        </div>
+        <div id="editQuizs">
+            <form>
+                <div class="maker">
+                    <p class="take-show">Create Your Quiz Here</p>
+                </div>
+                <div class="oftion_input">
+                    <input class="optional" type="text" placeholder="Question">
+                </div>
+                <div class="chooser_option">
+                    <div class="chocess" id="option1">
+                        <input id="tion1" type="text" class="optioner" placeholder="Answer1">
+                    </div>
+                    <div class="chocess" id="option3">
+                        <input id="tion3" type="text" class="optioner" placeholder="Answer3">
+                    </div>
+                </div>
+
+                <div class="chooser_option">
+                    <div class="chocess" id="option2">
+                        <input id="tion2" type="text" class="optioner" placeholder="Answer2"><br>
+                    </div>
+                    <div class="chocess" id="option4">
+                        <input id="tion4" type="text" class="optioner" placeholder="Answer4"><br>
+                    </div>
+                </div>
+
+            </form>
+
+            <div>
+                <div class="addtogo" id="addtogo">Add+</div>
+
+                <div id="display-container"></div>
+            </div>
+
+        </div>
         <div class="backAndNext">
-           
+
             <button class="nexstst">Done</button>
         </div>
         <div id="display-container-1"></div>
-        
+
     </div>
 
     <section class="question" id="play-quiz">
-        
-      <div class="card1">
-        <div class="biganswer">
-           <!-- -- -->
-          
-        </div>
-        
 
-      </div>
-      
+        <div class="card1">
+            <div class="biganswer">
+            </div>
+        </div>
     </section>
-  </div>
-</div>
-<div id="allScore" class="controllallquiz">
-    <form class="allquestion">
-        <div class="header">
-            <h4>1.Find the Verb past simple in the box correct verb.</h4>
-            <p><span id="score">score 20</span></p>
-        </div>
-        <div>
-            <input type="radio" id="q1-answer1" name="answer1" class="answers" value="Wrote" >
-           <label for="q1-answer1" id="answer-1">Wrote</label>
-        </div>
-        <div>
-            <input type="radio" id="q1-answer2" name="answer1" class="answers" value="Weak-up" >
-           <label for="q1-answer2" id="answer-1">Weak-up</label>
-        </div>
-        <div>
-            <input type="radio" id="q1-answer3" name="answer1" class="answers" value="get-up late" >
-           <label for="q1-answer3" id="answer-1">get-up late</label>
-        </div>
-        <div>
-            <input type="radio" id="q1-answer4" name="answer1" class="answers" value="Speaking" >
-           <label for="q1-answer4" id="answer-1">Speaking</label>
-        </div>
-        <i class="fa fa-trash" style="font-size: 30px;"   id="delete"></i>
-    </form>
-    <form class="allquestion">
-        <div class="header">
-            <h4>2.Which one is the correct sentences in the box?</h4>
-            <p><span id="score">score 20</span></p>
-        </div>
-        <div>
-            <input type="radio" id="q2-answer1" name="answer2" class="answers" value="They run on me" >
-           <label for="q2-answer1" id="answer-1">They run on me</label>
-        </div>
-        <div>
-            <input type="radio" id="q2-answer2" name="answer2" class="answers" value="She goes to school" >
-           <label for="q2-answer2" id="answer-1">She goes to school</label>
-        </div>
-        <div>
-            <input type="radio" id="q2-answer3" name="answer2" class="answers" value="Somthing more" >
-           <label for="q2-answer3" id="answer-1">Somthing more</label>
-        </div>
-        <div>
-            <input type="radio" id="q2-answer4" name="answer2" class="answers" value="You try me" >
-           <label for="q2-answer4" id="answer-1">You try me</label>
-        </div>
-        <i class="fa fa-trash" style="font-size: 30px;"   id="delete"></i>
-    </form>
-    <form class="allquestion">
-        <div class="header">
-            <h4>3.How.........you make it when you get home?.</h4>
-            <p><span id="score">score 20</span></p>
-        </div>
-        <div>
-            <input type="radio" id="q3-answer1" name="answer3" class="answers" value="working" >
-           <label for="q3-answer1" id="answer-1">working</label>
-        </div>
-        <div>
-            <input type="radio" id="q3-answer2" name="answer3" class="answers" value="practice" >
-           <label for="q3-answer2" id="answer-1">practice</label>
-        </div>
-        <div>
-            <input type="radio" id="q3-answer3" name="answer3" class="answers" value="Money book" >
-           <label for="q3-answer3" id="answer-1">Money book</label>
-        </div>
-        <div>
-            <input type="radio" id="q3-answer4" name="answer3" class="answers" value="do" >
-           <label for="q3-answer4" id="answer-1">do</label>
-        </div>
-        <i class="fa fa-trash" style="font-size: 30px;"   id="delete"></i>
-    </form>
-    <div class="submit">
-        <button id="btnSubmit">Submit</button>
     </div>
-</div>
-<form  id="showscores">
-    <h3 class="showtext">Your result</h3>
-    <div class="storeallscore">
-        <div class="newscore"><span>Score  : </span><span id="scores">0</span><span>/60</span></div>
     </div>
-</form>
-<button id="backtos" class="backtos">Back</button>
+    <div id="allScore" class="controllallquiz">
+        <form class="allquestion">
+            <div class="header">
+                <h4>1.Find the Verb past simple in the box correct verb.</h4>
+                <p><span id="score">score 20</span></p>
+            </div>
+            <div>
+                <input type="radio" id="q1-answer1" name="answer1" class="answers" value="Wrote">
+                <label for="q1-answer1" id="answer-1">Wrote</label>
+            </div>
+            <div>
+                <input type="radio" id="q1-answer2" name="answer1" class="answers" value="Weak-up">
+                <label for="q1-answer2" id="answer-1">Weak-up</label>
+            </div>
+            <div>
+                <input type="radio" id="q1-answer3" name="answer1" class="answers" value="get-up late">
+                <label for="q1-answer3" id="answer-1">get-up late</label>
+            </div>
+            <div>
+                <input type="radio" id="q1-answer4" name="answer1" class="answers" value="Speaking">
+                <label for="q1-answer4" id="answer-1">Speaking</label>
+            </div>
+            <i class="fa fa-trash" style="font-size: 30px;" id="delete"></i>
+        </form>
+        <form class="allquestion">
+            <div class="header">
+                <h4>2.Which one is the correct sentences in the box?</h4>
+                <p><span id="score">score 20</span></p>
+            </div>
+            <div>
+                <input type="radio" id="q2-answer1" name="answer2" class="answers" value="They run on me">
+                <label for="q2-answer1" id="answer-1">They run on me</label>
+            </div>
+            <div>
+                <input type="radio" id="q2-answer2" name="answer2" class="answers" value="She goes to school">
+                <label for="q2-answer2" id="answer-1">She goes to school</label>
+            </div>
+            <div>
+                <input type="radio" id="q2-answer3" name="answer2" class="answers" value="Somthing more">
+                <label for="q2-answer3" id="answer-1">Somthing more</label>
+            </div>
+            <div>
+                <input type="radio" id="q2-answer4" name="answer2" class="answers" value="You try me">
+                <label for="q2-answer4" id="answer-1">You try me</label>
+            </div>
+            <i class="fa fa-trash" style="font-size: 30px;" id="delete"></i>
+        </form>
+        <form class="allquestion">
+            <div class="header">
+                <h4>3.How.........you make it when you get home?.</h4>
+                <p><span id="score">score 20</span></p>
+            </div>
+            <div>
+                <input type="radio" id="q3-answer1" name="answer3" class="answers" value="working">
+                <label for="q3-answer1" id="answer-1">working</label>
+            </div>
+            <div>
+                <input type="radio" id="q3-answer2" name="answer3" class="answers" value="practice">
+                <label for="q3-answer2" id="answer-1">practice</label>
+            </div>
+            <div>
+                <input type="radio" id="q3-answer3" name="answer3" class="answers" value="Money book">
+                <label for="q3-answer3" id="answer-1">Money book</label>
+            </div>
+            <div>
+                <input type="radio" id="q3-answer4" name="answer3" class="answers" value="do">
+                <label for="q3-answer4" id="answer-1">do</label>
+            </div>
+            <i class="fa fa-trash" style="font-size: 30px;" id="delete"></i>
+        </form>
+        <div class="submit">
+            <button id="btnSubmit">Submit</button>
+        </div>
+    </div>
+    <form id="showscores">
+        <h3 class="showtext">Your result</h3>
+        <div class="storeallscore">
+            <div class="newscore"><span>Score : </span><span id="scores">0</span><span>/60</span></div>
+        </div>
+    </form>
+    <button id="backtos" class="backtos">Back</button>
 </body>
 <script src="main.js"></script>
+
 </html>
-<!-- ////-heng- -->

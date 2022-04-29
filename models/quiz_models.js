@@ -32,10 +32,14 @@ function deleleQuiz(id) {
     // TODO: load data
     let quzi = load();
     // TODO: Mission 4 - Remove the task with good id
-    let index = quzi.findIndex(quzi => quzi.id === parseInt(id));
-    quzi.splice(index, 1);
+    let index = quzi.findIndex(quiz => quiz.id === parseInt(id));
+    if(index>=0){
+        quzi.splice(index, 1);
+
+    }
     // TODO: Save data
     save(quzi);
+    return true;
   }
   function updateQuiz(id) {
     // TODO: load data
