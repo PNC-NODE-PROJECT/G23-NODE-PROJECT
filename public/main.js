@@ -1,32 +1,3 @@
-// let path = "http://localhost:80/quizs";
-
-
-
-// function refreshDom(quizzes){
-//     console.log(quizzes);
-//     let list =  document.querySelector('.question');
-//     let question = quizzes[0].question;
-//     let title_dom = document.createElement("p");
-//     title_dom.textContent = question;
-//     list.appendChild(title_dom);
-// }
-// function getAllQuizzes() {
-//     axios.get(path)
-//     .then(function (response) {
-//     refreshDom(response.data);
-//     })
-// }
-  
-// getAllQuizzes();
-// // let  quize = {"id":2,"question":"me","answer":{"a":"d","b":"no"},"completed":false};
-// // axios.post(path,quize);
-// let willseeonlyscore=document.querySelector("#btnSubmit");
-// // willseeonlyscore.addEventListener("click",showonlyscore);
-
-
-
-
-// ================================Heng========================
 let score = document.querySelector('#score');
 let nextPage=document.getElementById("next");
 let submits=document.getElementById("submits");
@@ -44,7 +15,6 @@ numbers.style.display="none";
 backto.style.display="none";
 hideThpquizcreat.style.display="none"
 
-// ==================================Heng===========================================
 function next(){
   // get value from forms iniput name and email password
   let nameInput = document.querySelector('#name').value;
@@ -56,8 +26,6 @@ function next(){
     alert("Sorry You Missing Input...!");
   }
   else{
-    // console.log(nameInput);
-    // console.log(passwordInput);
     editQuizs.style.display="none";
   nextPage.style.display="block";
   wrapper.style.display="none";
@@ -88,7 +56,6 @@ btnShow.addEventListener("click",playQuiz);
 getQuiz.style.display="none";
 let container=document.querySelector(".container")
 
-// ==========================================Narong=======================================
 
 function edit(e){
   e.preventDefault();
@@ -174,16 +141,7 @@ function edit(e){
       div.appendChild(labeles3)
       
       
-      // show about question 4------------------=============
-      let question4 =document.createElement("input");
-      question4.type="radio";
-      question4.name=questionname.toString();
-      question4.id=squestionsId.toString();
-      question4.classList="quest1";
-      let labeles4=document.createElement("label");
-      labeles4.textContent=tion4.value;
-      div.appendChild(question4);
-      div.appendChild(labeles4)
+     
       // Reloat the name input when we aready input===================
       quest.value="";
       tion1.value="";
@@ -246,7 +204,6 @@ let neashower=document.querySelector(".backAndshownewquiz");
   let getbackenow= document.querySelector(".backs")
   getbackenow.addEventListener("click",getback);
 
-  // =============================Heng==============================
   // Object for geting score for the question=======================
   
   let arrQ = [
@@ -300,7 +257,6 @@ function backstoquiz(){
 let backgoquiz=document.querySelector("#backtos");
 backgoquiz.addEventListener("click",backstoquiz);
 
-// ================================Heng===============================
 // Small broswer will show when we submit about question======>
 function showonlyscore(){
   hidethequestion.style.display="none";
@@ -310,7 +266,7 @@ function showonlyscore(){
 };
 let willseeonlyscore=document.querySelector("#btnSubmit");
 willseeonlyscore.addEventListener("click",showonlyscore);
-//////////////heng///////////////////
+
 // get data from server 
 // const dom_display_container_1 = document.getElementById("display-container-1");
 function appear_question(datas){
@@ -353,7 +309,6 @@ function appear_question(datas){
   }
 }
 
-
 function getAllData() {
   axios.get("/api/quiz").then((res)=>{
     appear_question(res.data);
@@ -361,5 +316,3 @@ function getAllData() {
   })
 }
 getAllData();
-
-////////////////////////heng///////////////////

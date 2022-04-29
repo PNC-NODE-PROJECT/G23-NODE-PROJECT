@@ -1,8 +1,3 @@
-// const express=require('express');
-// const { v4: uuidv4 } = require('uuid');
-// const router =express.Router();
-
-// let items =[]
 const express = require('express');
 const router = express.Router();
 
@@ -54,5 +49,4 @@ router.patch('/:id', (req, res) => {
         })
     }
 })
-
 module.exports = router;
