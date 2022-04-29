@@ -1,24 +1,23 @@
-<!-- 
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FrontEnd</title>
+  <title>Quiz app</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="main.js" defer></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<body> 
+
+<body>
+  <!-- ==============================for fill the name and next to display question ==================>>>>>>>>>>>>> -->
 <div id="wrapper" class="deletform">
     <header class="header">
       <div class="sceeps" id="page-banner">
-          <h3 class="scoress">My - Quizs</h3>
+        <h3 class="scoress">My - Quizs</h3>
       </div>
     </header>
-    <div class="question">
-    </div>
     <form action="/action_page.php">
         <div class="containerr">
           <input class="input" type="email" placeholder="Your Email" id="name">
@@ -33,10 +32,12 @@
     <p class="welcomes">Welcome to App quizs</p>
     <button class="pays" id="btn-quiz">Play Quiz</button>
     <button class="eddits" id="btn-edit-quiz">Add-Quiz</button>
-  </div> -->
+  </div>
   
   <!-- ===========>>>>>><<<<<<<<<============= -->
-    <!-- <div class="backAndBack">
+    <!-- ######heng### -->
+
+    <div class="backAndBack">
         <button class="backs">Back</button>
     </div>
     <div class="backAndshownewquiz">
@@ -53,39 +54,55 @@
           <div class="chooser_option">
               <div class="chocess" id="option1"> 
                   <input type="radio" name="radio1">
-                  <input id="tion1"  type="text" class="optioner" placeholder="Option1">
+                  <input id="tion1"  type="text" class="optioner" placeholder="Answer1">
               </div>
               <div class="chocess" id="option3"> 
                   <input type="radio" name="radio">
-                  <input id="tion3" type="text" class="optioner" placeholder="Option3">
+                  <input id="tion3" type="text" class="optioner" placeholder="Answer3">
               </div>
           </div>
 
           <div class="chooser_option" >
               <div class="chocess" id="option2">
                   <input type="radio" name="radio2">
-                  <input id="tion2"  type="text" class="optioner" placeholder="Option2"><br>
+                  <input id="tion2"  type="text" class="optioner" placeholder="Answer2"><br>
               </div>
               <div class="chocess" id="option4">
                   <input type="radio" name="radio4">
-                  <input id="tion4"  type="text" class="optioner" placeholder="Option4"><br>
+                  <input id="tion4"  type="text" class="optioner" placeholder="Answer4"><br>
               </div>
           </div>
+         
       </form>
         
       <div>
           <button  class="addtogo" id="addtogo">Add+</button>
+         
+         
+          <div id="display-container">
+          </div>
+      </div>
+     
       </div>
         <div class="backAndNext">
+           
             <button class="nexstst">Done</button>
         </div>
-      
+        <div id="display-container-1"></div>
+        
     </div>
+
     <section class="question" id="play-quiz">
+        
       <div class="card1">
         <div class="biganswer">
+           <!-- -- -->
+          
         </div>
+        
+
       </div>
+      
     </section>
   </div>
 </div>
@@ -141,9 +158,24 @@
             <h4>3.How.........you make it when you get home?.</h4>
             <p><span id="score">score 20</span></p>
         </div>
+        <div>
+            <input type="radio" id="q3-answer1" name="answer3" class="answers" value="working" >
+           <label for="q3-answer1" id="answer-1">working</label>
+        </div>
+        <div>
+            <input type="radio" id="q3-answer2" name="answer3" class="answers" value="practice" >
+           <label for="q3-answer2" id="answer-1">practice</label>
+        </div>
+        <div>
+            <input type="radio" id="q3-answer3" name="answer3" class="answers" value="Money book" >
+           <label for="q3-answer3" id="answer-1">Money book</label>
+        </div>
+        <div>
+            <input type="radio" id="q3-answer4" name="answer3" class="answers" value="do" >
+           <label for="q3-answer4" id="answer-1">do</label>
+        </div>
         <i class="fa fa-trash" style="font-size: 30px;"   id="delete"></i>
     </form>
-   
     <div class="submit">
         <button id="btnSubmit">Submit</button>
     </div>
@@ -156,4 +188,6 @@
 </form>
 <button id="backtos" class="backtos">Back</button>
 </body>
-</html> -->
+<script src="main.js"></script>
+</html>
+<!-- ////-heng- -->

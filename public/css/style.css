@@ -390,3 +390,9 @@ i:hover{
     text-align: center;
 }
 
+.card{
+    background: rgb(253, 252, 252);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}

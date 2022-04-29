@@ -3,7 +3,7 @@ const fs = require('fs');
 const PATH ="tasks.json";
 
 function load(){
-    return JSON.parse(fs.readFileSync(PATH))
+    return JSON.parse(fs.readFileSync(PATH));
 }
 
 function save(data){
@@ -41,7 +41,7 @@ function deleleQuiz(id) {
     // TODO: load data
     let quize = load();
     // TODO: Mission 5 - Update the task with good id to 'completed'
-    let index = quize .findIndex(quize  => quize .id === parseInt(id));
+    let index = quize.findIndex(quize  => quize.id === parseInt(id));
     quize [index].completed = true;
     // TODO: Save data
     save(quize);
