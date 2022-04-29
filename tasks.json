@@ -1,39 +1,21 @@
 [
     {
         "id": 1,
-        "title": "1/ How many people in your family",
-        "Answer1": "3 people",
-        "Answer2": "5 people",
-        "Answer3": "7 people",
-        "correction": "5 people",
-        "score": 20
-         
+        "question": "kimky bak sloy",
+        "answer_1": "yes",
+        "answer_2": "no",
+        "answer_3": "ys",
+        "answer_4": "no"
     },
     {
         "id": 2,
-        "title": "2/Find the Verb past simple correct.",
-        "Answer1": "Wrote",
-        "Answer2": "speaking",
-        "Answer3": "studying",
-        "correction": "Wrote",
-        "score": 20
+        "question": "hell",
+        "answer_1": "da",
+        "answer_2": "dsfe",
+        "answer_3": "fe",
+        "answer_4": "h"
     },
     {
-        "id": 3,
-        "title": "3/ How...you make when you get home?",
-        "Answer1": "working",
-        "Answer2": "do",
-        "Answer3": "goes",
-        "correction": "do",
-        "score": 20
-    },
-    {
-        "id": 4,
-        "title": "4/ where are you come from?",
-        "Answer1": "I'm from omc",
-        "Answer2": "I'm from bmc",
-        "Answer3": "I'm from btk",
-        "correction": "I'm bmc",
-        "score": 20
+        "id": 3
     }
 ]

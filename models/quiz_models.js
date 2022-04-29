@@ -7,14 +7,14 @@ function load(){
 }
 
 function save(data){
-    fs.writeFileSync(PATH,JSON.stringify(data));
+    fs.writeFileSync(PATH,JSON.stringify(data,null,4));
 }
 
 function getAllQuizes(){
     return load();
 }
 
-function createNewQuiz(question){
+function createNewQuiz(question,answers_1,answers_2,answers_3,answers_4){
     let quizs=load();
     let id =null;
     if (quizs.length > 0){
@@ -22,10 +22,10 @@ function createNewQuiz(question){
     }else{
         id=1
     }
-    let newquiz = {"id":id,"question":question.question,"answer":question.answer,"correction":question.correction}
+    let newquiz = {"id":id,"question":question,"answer_1":answers_1,"answer_2":answers_2,"answer_3":answers_3,"answer_4":answers_4}
     quizs.push(newquiz);
     save(quizs);
-    return true;
+    
 }
 
 function deleleQuiz(id) {

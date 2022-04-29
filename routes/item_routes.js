@@ -15,16 +15,15 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    let isAddItem = itemModel.addItem(req.body)
-    if (isAddItem) {
-        res.status(201).send({
-            "message": 'Item added successfully'
-        })
-    } else {
-        res.status(500).send({
-            "message": 'All field required'
-        })
-    }
+
+    let question = req.body.Question;
+    let answers_1 = req.body.answers1;
+    let answers_2 = req.body.answers2;
+    let answers_3 = req.body.answers3;
+    let answers_4 = req.body.answers4;
+    itemModel.createNewQuiz(question,answers_1,answers_2,answers_3,answers_4);
+    res.send("SUCCESSFUL")
+    console.log(question);
 })
 
 router.delete('/:id', (req, res) => {

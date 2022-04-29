@@ -1,32 +1,5 @@
-// let path = "http://localhost:80/quizs";
 
 
-
-// function refreshDom(quizzes){
-//     console.log(quizzes);
-//     let list =  document.querySelector('.question');
-//     let question = quizzes[0].question;
-//     let title_dom = document.createElement("p");
-//     title_dom.textContent = question;
-//     list.appendChild(title_dom);
-// }
-// function getAllQuizzes() {
-//     axios.get(path)
-//     .then(function (response) {
-//     refreshDom(response.data);
-//     })
-// }
-  
-// getAllQuizzes();
-// // let  quize = {"id":2,"question":"me","answer":{"a":"d","b":"no"},"completed":false};
-// // axios.post(path,quize);
-// let willseeonlyscore=document.querySelector("#btnSubmit");
-// // willseeonlyscore.addEventListener("click",showonlyscore);
-
-
-
-
-// ================================Heng========================
 let score = document.querySelector('#score');
 let nextPage=document.getElementById("next");
 let submits=document.getElementById("submits");
@@ -44,7 +17,7 @@ numbers.style.display="none";
 backto.style.display="none";
 hideThpquizcreat.style.display="none"
 
-// ==================================Heng===========================================
+
 function next(){
   // get value from forms iniput name and email password
   let nameInput = document.querySelector('#name').value;
@@ -88,7 +61,6 @@ btnShow.addEventListener("click",playQuiz);
 getQuiz.style.display="none";
 let container=document.querySelector(".container")
 
-// ==========================================Narong=======================================
 
 function edit(e){
   e.preventDefault();
@@ -107,6 +79,8 @@ function edit(e){
   let tion2=document.querySelector("#tion2");
   let tion3=document.querySelector("#tion3");
   let tion4 = document.querySelector("#tion4");
+  
+
 
   let firsQuestion=0;
   var ObjectDelete=[];
@@ -116,91 +90,12 @@ function edit(e){
   // Function about how to make the questions in browswer
   function maker_the_question(){
     // add the question to object and desplay to broswer-----------
-    let object=[{Question:quest.value,answers1:tion1.value,answers2:tion2.value,answers3:tion3.value,answers4:tion4.value}];
-    localStorage.setItem("Heng",JSON.stringify( object));
-    for (let value of object){
-      // Creating the form to show about questions------------------------------
-      let create_question=document.querySelector(".biganswer");
-      let div =document.createElement("div");
-      div.classList="make_question";
-      create_question.appendChild(div);
-      let keepTheform=document.createElement("div");
-      keepTheform.classList="flexDelete";
-      create_question.appendChild(keepTheform);
-      let bigquestiton=document.createElement("form");
-      bigquestiton.className="title_question";
-      let create_deletes=document.createElement("button");
-      create_deletes.classList="delectts";
-      create_deletes.id="delectts"
-      keepTheform.appendChild(bigquestiton);
-      keepTheform.appendChild(create_deletes);
-      bigquestiton.textContent=quest.value;
-      div.appendChild(keepTheform);
-      create_deletes.textContent="Delete";
-      // Show about question1 --------------------===================
-      let question1=document.createElement("input");
-      let label=document.createElement("label");
-      label.classList="allanswerses"
-      question1.type="radio";
-      question1.name=questionname.toString();
-      question1.id=squestionsId.toString();
-      question1.classList="quest1";
-      label.textContent=tion1.value;
-      div.appendChild(question1);
-      div.appendChild(label);
-      
-      
-      // Show about  question2----------------------====================
-      let question2=document.createElement("input");
-      let labels2=document.createElement("label");
-      question2.type="radio";
-      question2.name=questionname.toString();
-      question2.id=squestionsId.toString();
-      question2.classList="quest1";
-      labels2.textContent=tion2.value;
-      div.appendChild(question2);
-      div.appendChild(labels2)
-      
-      
-    // Show about question 3--------------===================
-      let question3=document.createElement("input");
-      question3.type="radio";
-      question3.name=questionname.toString();
-      question3.id=squestionsId.toString();
-      question3.classList="quest1";
-      let labeles3=document.createElement("label");
-      labeles3.textContent=tion3.value;
-      div.appendChild(question3);
-      div.appendChild(labeles3)
-      
-      
-      // show about question 4------------------=============
-      let question4 =document.createElement("input");
-      question4.type="radio";
-      question4.name=questionname.toString();
-      question4.id=squestionsId.toString();
-      question4.classList="quest1";
-      let labeles4=document.createElement("label");
-      labeles4.textContent=tion4.value;
-      div.appendChild(question4);
-      div.appendChild(labeles4)
-      // Reloat the name input when we aready input===================
-      quest.value="";
-      tion1.value="";
-      tion2.value="";
-      tion3.value="";
-      tion4.value="";
-      // console.log(create_question);
-    };
-    questionname+=1;
-    squestionsId+=1;
-    // loop on for for delect questions===============
-    let forms = document.querySelectorAll(".delectts");
-    for (let form of forms){
-      form.addEventListener("click",deleteForm);
+    let object={Question:quest.value,answers1:tion1.value,answers2:tion2.value,answers3:tion3.value,answers4:tion4.value};
+    axios.post("/api/quiz",object).then((response) => {
+
+      })
+
     }
-    hideThpquizcreat.style.display="block";
-  };
 // Show only new quiz for user creaters ===============
 let backgotoback=document.querySelector(".backAndBack")
 let newshower=document.querySelector(".backAndBack");
@@ -246,7 +141,6 @@ let neashower=document.querySelector(".backAndshownewquiz");
   let getbackenow= document.querySelector(".backs")
   getbackenow.addEventListener("click",getback);
 
-  // =============================Heng==============================
   // Object for geting score for the question=======================
   
   let arrQ = [
@@ -300,7 +194,7 @@ function backstoquiz(){
 let backgoquiz=document.querySelector("#backtos");
 backgoquiz.addEventListener("click",backstoquiz);
 
-// ================================Heng===============================
+
 // Small broswer will show when we submit about question======>
 function showonlyscore(){
   hidethequestion.style.display="none";
@@ -310,7 +204,7 @@ function showonlyscore(){
 };
 let willseeonlyscore=document.querySelector("#btnSubmit");
 willseeonlyscore.addEventListener("click",showonlyscore);
-//////////////heng///////////////////
+
 // get data from server 
 // const dom_display_container_1 = document.getElementById("display-container-1");
 function appear_question(datas){
@@ -325,26 +219,31 @@ function appear_question(datas){
     
     let question = document.createElement("spam");
     question.className="question";
-    question.textContent=data.title;
+    question.textContent=data.question;
     card.appendChild(question);
     card.appendChild(answer_container);
 
 
     let answer_1 = document.createElement("p");
     answer_1.className="answers";
-    answer_1.textContent=data.Answer1;
+    answer_1.textContent=data.answer_1;
 
     let answer_2 = document.createElement("p");
     answer_2.className="answers";
-    answer_2.textContent=data.Answer2;
+    answer_2.textContent=data.answer_2;
 
     let answer_3 = document.createElement("p");
     answer_3.className="answers";
-    answer_3.textContent=data.Answer3;
+    answer_3.textContent=data.answer_3;
+
+    let answer_4 = document.createElement("p");
+    answer_4.className="answers";
+    answer_4.textContent=data.answer_4;
 
     answer_container.appendChild(answer_1);
     answer_container.appendChild(answer_2);
     answer_container.appendChild(answer_3);
+    answer_container.appendChild(answer_4);
 
     dom_display_container.appendChild(card);
        
@@ -362,4 +261,3 @@ function getAllData() {
 }
 getAllData();
 
-////////////////////////heng///////////////////
