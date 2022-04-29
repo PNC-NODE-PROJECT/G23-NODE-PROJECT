@@ -213,12 +213,27 @@ function appear_question(datas){
     let answer_container = document.createElement("div");
     answer_container.className="answer-container";
     
+    let div = document.createElement("div");
+    div.className = "q_btn";
     let question = document.createElement("spam");
     question.className="question";
     question.textContent=data.question;
-    card.appendChild(question);
-    card.appendChild(answer_container);
 
+    let btn = document.createElement("div");
+    btn.className="btn"
+    let edit = document.createElement('button');
+    edit.className = "edit";
+    let btn_delete = document.createElement('button')
+    btn_delete.className = "delete"
+    btn.appendChild(edit);
+    edit.textContent = "edit";
+    btn.appendChild(btn_delete);
+    btn_delete.textContent = "delete";
+    div.appendChild(question);
+    div.appendChild(btn);
+    card.appendChild(div);
+    card.appendChild(div);
+    card.appendChild(answer_container);
 
     let answer_1 = document.createElement("p");
     answer_1.className="answers";

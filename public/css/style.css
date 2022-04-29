@@ -155,25 +155,7 @@ body{
    .allanswerses{
        margin-top: 20px;
    }
-   .flexDelete{
-       display: flex;
-       justify-content: space-between;
-       margin-bottom: 20px;
-       margin-left: 2rem;
-   }
-   .delectts{
-       display: flex;
-       margin-top: 0%;
-       width: 8%;
-       height: 4vh;
-       display: flex;
-       color: #fff;
-       font-size: 20px;
-       align-items: center;
-       text-align: center;
-       border-radius: 4px;
-       background: rgb(250, 80, 80);
-   }
+
 .make_question{
     background: rgb(218, 225, 246);
     border-radius: 4px;
@@ -395,4 +377,11 @@ i:hover{
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+}
+.q_btn{
+    display:flex;
+    justify-content:space-between;
+}
+.btn{
+    margin-left: 70%;
 }
