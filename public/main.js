@@ -18,9 +18,7 @@ backto.style.display = "none";
 hideThpquizcreat.style.display = "none"
 
 function next() {
-  // get value from forms iniput name and email password
   let nameInput = document.querySelector('#name').value;
-  // let emailInput = document.querySelector('#mail').value;
   let passwordInput = document.querySelector('#password').value;
 
   // check if inputemail wrong
@@ -37,15 +35,12 @@ function next() {
   neashower.style.display = "none"
 };
 
-// submits.style.display="none";
-// MAIN----------------------------------------------------
+//--------------------------------------------------- Button Next------------------------------------------------------------------------------------
 let buttonNext = document.getElementById('btnNext');
 buttonNext.addEventListener("click", next);
-
-//  come to play the quiz when you click on next button
 let getQuiz = document.getElementById("play-quiz");
 getQuiz.style.display = "none";
-
+// ---------------------------------------------------Play Quiz-----------------------------------------------------------
 function playQuiz(e) {
   e.preventDefault()
   hidethequestion.style.display = "block";
@@ -68,7 +63,6 @@ function edit(e) {
   getbackenow.style.display = "block";
   hideThpquizcreat.style.display = "none"
 };
-// Getting Id and class from HTMl
 let btnHide = document.getElementById("btn-edit-quiz");
 btnHide.addEventListener("click", edit);
 let quest = document.querySelector(".optional");
@@ -82,19 +76,19 @@ var ObjectDelete = [];
 // engryment id or name about the radio in answers and Id or name
 squestionsId = 0;
 questionname = 0;
-// Function about how to make the questions in browswer
+// --------------------------------------------Create Question-----------------------------------------------
 function maker_the_question() {
-  // add the question to object and desplay to broswer-----------
   let object = { Question: quest.value, answers1: tion1.value, answers2: tion2.value, answers3: tion3.value, answers4: tion4.value };
   axios.post("/api/quiz", object).then((response) => {
     getAllData();
   })
 
 }
-// Show only new quiz for user creaters ===============
+
 let backgotoback = document.querySelector(".backAndBack")
 let newshower = document.querySelector(".backAndBack");
 let neashower = document.querySelector(".backAndshownewquiz");
+// -------------------------------------------Display New Question--------------------------------------------
 function newQuiz() {
   editQuizs.style.display = "block";
   newshower.style.display = "none";
@@ -103,10 +97,10 @@ function newQuiz() {
 }
 let newQuizsss = document.querySelector(".backAndshownewquiz");
 newQuizsss.addEventListener("click", newQuiz)
-// button click make the question.==========
+
 let creaters = document.querySelector(".addtogo");
 creaters.addEventListener("click", maker_the_question);
-// function for deleting the question from make
+
 function deleteForm(e) {
   e.target.parentElement.parentElement.remove()
 }
@@ -136,7 +130,7 @@ function getback() {
 let getbackenow = document.querySelector(".backs")
 getbackenow.addEventListener("click", getback);
 
-// Object for geting score for the question=======================
+// -----------------------------------------Object Of Question------------------------------------------------------
 
 let arrQ = [
   {
@@ -158,7 +152,7 @@ let arrQ = [
   },
 ];
 
-// function and loop geting score----------------------------
+// -------------------------------------Button Sumit and Get Score--------------------------------------------------------------------
 function submitTask() {
   let answers = document.querySelectorAll(".answers");
   for (let answer of answers) {
@@ -195,7 +189,7 @@ function backstoquiz() {
 let backgoquiz = document.querySelector("#backtos");
 backgoquiz.addEventListener("click", backstoquiz);
 
-// Small broswer will show when we submit about question======>
+
 function showonlyscore() {
   hidethequestion.style.display = "none";
   showonlyscores.style.display = "block";
@@ -205,12 +199,16 @@ function showonlyscore() {
 let willseeonlyscore = document.querySelector("#btnSubmit");
 willseeonlyscore.addEventListener("click", showonlyscore);
 
-// get data from server 
-// const dom_display_container_1 = document.getElementById("display-container-1");
+// ------------------------------------------Get Data From server------------------------------------------------------------------------
 function appear_question() {
   axios.get("http://localhost/api/quiz/").then(res => {
     let datas = res.data;
-    const dom_display_container = document.getElementById("display-container");
+    let dom_question = document.querySelector(".dom_question");
+    console.log(dom_question);
+    let dom_to_remove = document.getElementById("display-container");
+    dom_to_remove.remove();
+    const dom_display_container = document.createElement("div");
+    dom_display_container.id = "display-container";
     for (let i = 0; i < datas.length; i++) {
       data = datas[i];
       console.log(datas)
@@ -265,19 +263,19 @@ function appear_question() {
 
       dom_display_container.appendChild(card);
     }
+    dom_question.appendChild(dom_display_container);
   });
 
 }
-
+// ------------------------------------------------Delete Question------------------------------------------------
 function deleteQuestion(e) {
-
   if (e.target.className === "delete") {
     id = e.target.parentElement.parentElement.parentElement.id;
-    // console.log(id);
     axios.delete("http://localhost/api/quiz/" + id).then(appear_question)
+    appear_question();
   }
 }
-
+// ------------------------------------------------Get all Question-------------------------------------------------
 function getAllData() {
   axios.get("/api/quiz").then((res) => {
     appear_question(res.data);

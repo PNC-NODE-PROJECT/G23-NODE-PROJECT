@@ -5,15 +5,15 @@ const PATH ="tasks.json";
 function load(){
     return JSON.parse(fs.readFileSync(PATH));
 }
-
+// ---------------------------------------Function Save Data---------------------------------------------
 function save(data){
     fs.writeFileSync(PATH,JSON.stringify(data,null,4));
 }
-
+// ---------------------------------------Function GetAllQuizs------------------------------------------
 function getAllQuizes(){
     return load();
 }
-
+// ---------------------------------------Function CreateNewQuiz--------------------------------------
 function createNewQuiz(question,answers_1,answers_2,answers_3,answers_4){
     let quizs=load();
     let id =null;
@@ -27,30 +27,39 @@ function createNewQuiz(question,answers_1,answers_2,answers_3,answers_4){
     save(quizs);
     
 }
-
+// ------------------------------------------------Function Deletequizs--------------------------------------------------------
 function deleleQuiz(id) {
-    // TODO: load data
+    // load data
     let quzi = load();
-    // TODO: Mission 4 - Remove the task with good id
     let index = quzi.findIndex(quiz => quiz.id === parseInt(id));
     if(index>=0){
         quzi.splice(index, 1);
 
     }
-    // TODO: Save data
+    //  Save data
     save(quzi);
     return true;
   }
-  function updateQuiz(id) {
-    // TODO: load data
+// ------------------------------------------------Function UpdateQuiz------------------------------------------------
+  function updateQuiz(item,id) {
+    //  load data
     let quize = load();
-    // TODO: Mission 5 - Update the task with good id to 'completed'
+    //  Update the task with good id to 'completed'
+    let status = false
     let index = quize.findIndex(quize  => quize.id === parseInt(id));
-    quize [index].completed = true;
-    // TODO: Save data
+    console.log(index);
+    if(index>=0){
+        quize[index].question = item.question;
+        quize[index].answer_1 = item.answer_1;
+        quize[index].answer_2 = item.answer_2;
+        quize[index].answer_3 = item.answer_3;
+        quize[index].answer_4 = item.answer_4;
+        status = true
+    }
+    //  Save data
     save(quize);
-  }
-
+    return status;
+}
 module.exports.createNewQuiz=createNewQuiz;
 module.exports.getAllQuizes=getAllQuizes;
 module.exports.deleleQuiz=deleleQuiz;

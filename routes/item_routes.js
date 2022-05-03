@@ -3,14 +3,17 @@ const router = express.Router();
 
 const itemModel = require('../models/quiz_models.js');
 console.log(itemModel.getAllQuizes());
-// items route
+
+// Item Routes
+// Get Question
+
 router.get('/', (req, res) => {
     let data = itemModel.getAllQuizes();
     res.status(200).send(data);
 })
 
+// Create Question
 router.post('/', (req, res) => {
-
     let question = req.body.Question;
     let answers_1 = req.body.answers1;
     let answers_2 = req.body.answers2;
@@ -20,6 +23,8 @@ router.post('/', (req, res) => {
     res.send("SUCCESSFUL")
     console.log(question);
 })
+
+// Delete Question
 
 router.delete('/:id', (req, res) => {
     let id = req.params.id  ;
@@ -35,9 +40,11 @@ router.delete('/:id', (req, res) => {
     }
 })
 
+// Update Question
+
 router.patch('/:id', (req, res) => {
     let id = req.params.id
-    let isUpdateItem = itemModel.updateItem(req.body,id)
+    let isUpdateItem = itemModel.updateQuiz(req.body,id)
     if (isUpdateItem) {
         res.status(200).send({
             "message": 'Item updated successfully'
@@ -48,4 +55,5 @@ router.patch('/:id', (req, res) => {
         })
     }
 })
+
 module.exports = router;
