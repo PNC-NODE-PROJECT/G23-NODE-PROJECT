@@ -201,7 +201,7 @@ willseeonlyscore.addEventListener("click", showonlyscore);
 
 // ------------------------------------------Get Data From server------------------------------------------------------------------------
 function appear_question() {
-  axios.get("http://localhost/api/quiz/").then(res => {
+  axios.get("/api/quiz/").then(res => {
     let datas = res.data;
     let dom_question = document.querySelector(".dom_question");
     console.log(dom_question);
@@ -265,13 +265,12 @@ function appear_question() {
     }
     dom_question.appendChild(dom_display_container);
   });
-
 }
 // ------------------------------------------------Delete Question------------------------------------------------
 function deleteQuestion(e) {
   if (e.target.className === "delete") {
     id = e.target.parentElement.parentElement.parentElement.id;
-    axios.delete("http://localhost/api/quiz/" + id).then(appear_question)
+    axios.delete("/api/quiz/" + id).then(appear_question)
     appear_question();
   }
 }
